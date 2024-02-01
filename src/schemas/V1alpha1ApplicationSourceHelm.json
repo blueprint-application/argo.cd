@@ -1,0 +1,48 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSourceHelm",
+    "schema": {
+      "title": "ApplicationSourceHelm holds helm specific options",
+      "type": "object",
+      "properties": {
+        "valueFiles": {
+          "title": "ValuesFiles is a list of Helm value files to use when generating a template",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "skipCrds": {
+          "title": "SkipCrds skips custom resource definition installation step (Helm's --skip-crds)",
+          "type": "boolean"
+        },
+        "valuesObject": { "$ref": "#/components/schemas/runtimeRawExtension" },
+        "releaseName": {
+          "title": "ReleaseName is the Helm release name to use. If omitted it will use the application name",
+          "type": "string"
+        },
+        "fileParameters": {
+          "title": "FileParameters are file parameters to the helm template",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1HelmFileParameter" }
+        },
+        "values": {
+          "title": "Values specifies Helm values to be passed to helm template, typically defined as a block. ValuesObject takes precedence over Values, so use one or the other.\n+patchStrategy=replace",
+          "type": "string"
+        },
+        "passCredentials": {
+          "title": "PassCredentials pass credentials to all domains (Helm's --pass-credentials)",
+          "type": "boolean"
+        },
+        "parameters": {
+          "title": "Parameters is a list of Helm parameters which are passed to the helm template command upon manifest generation",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1HelmParameter" }
+        },
+        "version": { "title": "Version is the Helm version to use for templating (\"3\")", "type": "string" },
+        "ignoreMissingValueFiles": {
+          "title": "IgnoreMissingValueFiles prevents helm template from failing when valueFiles do not exist locally by not appending them to helm template --values",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryRefs",
+    "schema": {
+      "title": "A subset of the repository's named refs",
+      "type": "object",
+      "properties": {
+        "branches": { "type": "array", "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSourcePlugin",
+    "schema": {
+      "title": "ApplicationSourcePlugin holds options specific to config management plugins",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "env": { "type": "array", "items": { "$ref": "#/components/schemas/applicationv1alpha1EnvEntry" } },
+        "parameters": {
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSourcePluginParameter" }
+        }
+      }
+    }
+  }
+]

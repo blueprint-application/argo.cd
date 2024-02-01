@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1Info",
+    "schema": { "type": "object", "properties": { "name": { "type": "string" }, "value": { "type": "string" } } }
+  }
+]

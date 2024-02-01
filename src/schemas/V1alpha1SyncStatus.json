@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SyncStatus",
+    "schema": {
+      "title": "SyncStatus contains information about the currently observed live and desired states of an application",
+      "type": "object",
+      "properties": {
+        "comparedTo": { "$ref": "#/components/schemas/v1alpha1ComparedTo" },
+        "revisions": {
+          "title": "Revisions contains information about the revisions of multiple sources the comparison has been performed to",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "revision": {
+          "title": "Revision contains information about the revision the comparison has been performed to",
+          "type": "string"
+        },
+        "status": { "title": "Status is the sync state of the comparison", "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1RepoCreds",
+    "schema": {
+      "title": "RepoCreds holds the definition for repository credentials",
+      "type": "object",
+      "properties": {
+        "tlsClientCertKey": {
+          "title": "TLSClientCertKey specifies the TLS client cert key for authenticating at the repo server",
+          "type": "string"
+        },
+        "githubAppID": {
+          "format": "int64",
+          "title": "GithubAppId specifies the Github App ID of the app used to access the repo for GitHub app authentication",
+          "type": "string"
+        },
+        "githubAppInstallationID": {
+          "format": "int64",
+          "title": "GithubAppInstallationId specifies the ID of the installed GitHub App for GitHub app authentication",
+          "type": "string"
+        },
+        "tlsClientCertData": {
+          "title": "TLSClientCertData specifies the TLS client cert data for authenticating at the repo server",
+          "type": "string"
+        },
+        "enableOCI": {
+          "title": "EnableOCI specifies whether helm-oci support should be enabled for this repo",
+          "type": "boolean"
+        },
+        "type": {
+          "description": "Type specifies the type of the repoCreds. Can be either \"git\" or \"helm. \"git\" is assumed if empty or absent.",
+          "type": "string"
+        },
+        "gcpServiceAccountKey": {
+          "title": "GCPServiceAccountKey specifies the service account key in JSON format to be used for getting credentials to Google Cloud Source repos",
+          "type": "string"
+        },
+        "githubAppPrivateKey": {
+          "title": "GithubAppPrivateKey specifies the private key PEM data for authentication via GitHub app",
+          "type": "string"
+        },
+        "url": { "title": "URL is the URL that this credentials matches to", "type": "string" },
+        "proxy": {
+          "title": "Proxy specifies the HTTP/HTTPS proxy used to access repos at the repo server",
+          "type": "string"
+        },
+        "password": { "title": "Password for authenticating at the repo server", "type": "string" },
+        "sshPrivateKey": {
+          "title": "SSHPrivateKey contains the private key data for authenticating at the repo server using SSH (only Git repos)",
+          "type": "string"
+        },
+        "forceHttpBasicAuth": {
+          "title": "ForceHttpBasicAuth specifies whether Argo CD should attempt to force basic auth for HTTP connections",
+          "type": "boolean"
+        },
+        "githubAppEnterpriseBaseUrl": {
+          "title": "GithubAppEnterpriseBaseURL specifies the GitHub API URL for GitHub app authentication. If empty will default to https://api.github.com",
+          "type": "string"
+        },
+        "username": { "title": "Username for authenticating at the repo server", "type": "string" }
+      }
+    }
+  }
+]

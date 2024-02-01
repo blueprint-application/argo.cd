@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryAppInfo",
+    "schema": {
+      "title": "AppInfo contains application type and app file path",
+      "type": "object",
+      "properties": { "path": { "type": "string" }, "type": { "type": "string" } }
+    }
+  }
+]

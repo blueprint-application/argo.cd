@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/projectProjectTokenCreateRequest",
+    "schema": {
+      "description": "ProjectTokenCreateRequest defines project token creation parameters.",
+      "type": "object",
+      "properties": {
+        "expiresIn": { "format": "int64", "title": "expiresIn represents a duration in seconds", "type": "string" },
+        "role": { "type": "string" },
+        "description": { "type": "string" },
+        "project": { "type": "string" },
+        "id": { "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetTemplate",
+    "schema": {
+      "title": "ApplicationSetTemplate represents argocd ApplicationSpec",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplateMeta" },
+        "spec": { "$ref": "#/components/schemas/v1alpha1ApplicationSpec" }
+      }
+    }
+  }
+]

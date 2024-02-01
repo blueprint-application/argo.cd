@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1HelmFileParameter",
+    "schema": {
+      "title": "HelmFileParameter is a file parameter that's passed to helm template during manifest generation",
+      "type": "object",
+      "properties": {
+        "path": {
+          "title": "Path is the path to the file containing the values for the Helm parameter",
+          "type": "string"
+        },
+        "name": { "title": "Name is the name of the Helm parameter", "type": "string" }
+      }
+    }
+  }
+]

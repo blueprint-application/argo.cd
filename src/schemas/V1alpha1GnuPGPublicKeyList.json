@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1GnuPGPublicKeyList",
+    "schema": {
+      "title": "GnuPGPublicKeyList is a collection of GnuPGPublicKey objects",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ListMeta" },
+        "items": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1GnuPGPublicKey" } }
+      }
+    }
+  }
+]

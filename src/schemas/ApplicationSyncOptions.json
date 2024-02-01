@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/applicationSyncOptions",
+    "schema": { "type": "object", "properties": { "items": { "type": "array", "items": { "type": "string" } } } }
+  }
+]

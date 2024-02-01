@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1AppProjectStatus",
+    "schema": {
+      "title": "AppProjectStatus contains status information for AppProject CRs",
+      "type": "object",
+      "properties": {
+        "jwtTokensByRole": {
+          "additionalProperties": { "$ref": "#/components/schemas/v1alpha1JWTTokens" },
+          "title": "JWTTokensByRole contains a list of JWT tokens issued for a given role",
+          "type": "object"
+        }
+      }
+    }
+  }
+]

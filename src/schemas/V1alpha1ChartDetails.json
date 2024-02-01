@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ChartDetails",
+    "schema": {
+      "title": "ChartDetails contains helm chart metadata for a specific version",
+      "type": "object",
+      "properties": {
+        "maintainers": {
+          "title": "List of maintainer details, name and email, e.g. [\"John Doe <john_doe@my-company.com>\"]",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "description": { "type": "string" },
+        "home": { "title": "The URL of this projects home page, e.g. \"http://example.com\"", "type": "string" }
+      }
+    }
+  }
+]

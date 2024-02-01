@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryRepoAppDetailsResponse",
+    "schema": {
+      "title": "RepoAppDetailsResponse application details",
+      "type": "object",
+      "properties": {
+        "plugin": { "$ref": "#/components/schemas/repositoryPluginAppSpec" },
+        "kustomize": { "$ref": "#/components/schemas/repositoryKustomizeAppSpec" },
+        "type": { "type": "string" },
+        "directory": { "type": "object", "title": "DirectoryAppSpec contains directory" },
+        "helm": { "$ref": "#/components/schemas/repositoryHelmAppSpec" }
+      }
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/gpgkeyGnuPGPublicKeyCreateResponse",
+    "schema": {
+      "title": "Response to a public key creation request",
+      "type": "object",
+      "properties": {
+        "created": { "$ref": "#/components/schemas/v1alpha1GnuPGPublicKeyList" },
+        "skipped": {
+          "title": "List of key IDs that haven been skipped because they already exist on the server",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+]

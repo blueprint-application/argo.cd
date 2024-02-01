@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationPatchRequest",
+    "schema": {
+      "title": "ApplicationPatchRequest is a request to patch an application",
+      "type": "object",
+      "properties": {
+        "patch": { "type": "string" },
+        "patchType": { "type": "string" },
+        "name": { "type": "string" },
+        "project": { "type": "string" },
+        "appNamespace": { "type": "string" }
+      }
+    }
+  }
+]

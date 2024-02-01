@@ -1,0 +1,26 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetApplicationStatus",
+    "schema": {
+      "title": "ApplicationSetApplicationStatus contains details about each Application managed by the ApplicationSet",
+      "type": "object",
+      "properties": {
+        "application": { "title": "Application contains the name of the Application resource", "type": "string" },
+        "step": { "title": "Step tracks which step this Application should be updated in", "type": "string" },
+        "lastTransitionTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message contains human-readable message indicating details about the status",
+          "type": "string"
+        },
+        "status": {
+          "title": "Status contains the AppSet's perceived status of the managed Application resource: (Waiting, Pending, Progressing, Healthy)",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

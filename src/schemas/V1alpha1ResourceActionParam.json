@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceActionParam",
+    "schema": {
+      "title": "TODO: describe this type\nTODO: describe members of this type",
+      "type": "object",
+      "properties": {
+        "default": { "type": "string" },
+        "name": { "type": "string" },
+        "type": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    }
+  }
+]

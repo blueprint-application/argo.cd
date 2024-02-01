@@ -1,0 +1,35 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSource",
+    "schema": {
+      "title": "ApplicationSource contains all required information about the source of an application",
+      "type": "object",
+      "properties": {
+        "repoURL": {
+          "title": "RepoURL is the URL to the repository (Git or Helm) that contains the application manifests",
+          "type": "string"
+        },
+        "path": {
+          "description": "Path is a directory path within the Git repository, and is only valid for applications sourced from Git.",
+          "type": "string"
+        },
+        "ref": {
+          "description": "Ref is reference to another source within sources field. This field will not be used if used with a `source` tag.",
+          "type": "string"
+        },
+        "targetRevision": {
+          "description": "TargetRevision defines the revision of the source to sync the application to.\nIn case of Git, this can be commit, tag, or branch. If omitted, will equal to HEAD.\nIn case of Helm, this is a semver tag for the Chart's version.",
+          "type": "string"
+        },
+        "plugin": { "$ref": "#/components/schemas/v1alpha1ApplicationSourcePlugin" },
+        "kustomize": { "$ref": "#/components/schemas/v1alpha1ApplicationSourceKustomize" },
+        "chart": {
+          "description": "Chart is a Helm chart name, and must be specified for applications sourced from a Helm repo.",
+          "type": "string"
+        },
+        "directory": { "$ref": "#/components/schemas/v1alpha1ApplicationSourceDirectory" },
+        "helm": { "$ref": "#/components/schemas/v1alpha1ApplicationSourceHelm" }
+      }
+    }
+  }
+]

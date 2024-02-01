@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetNestedGenerator",
+    "schema": {
+      "description": "ApplicationSetNestedGenerator represents a generator nested within a combination-type generator (MatrixGenerator or\nMergeGenerator).",
+      "type": "object",
+      "properties": {
+        "git": { "$ref": "#/components/schemas/v1alpha1GitGenerator" },
+        "plugin": { "$ref": "#/components/schemas/v1alpha1PluginGenerator" },
+        "merge": { "$ref": "#/components/schemas/v1JSON" },
+        "clusterDecisionResource": { "$ref": "#/components/schemas/v1alpha1DuckTypeGenerator" },
+        "scmProvider": { "$ref": "#/components/schemas/v1alpha1SCMProviderGenerator" },
+        "selector": { "$ref": "#/components/schemas/v1LabelSelector" },
+        "list": { "$ref": "#/components/schemas/v1alpha1ListGenerator" },
+        "matrix": { "$ref": "#/components/schemas/v1JSON" },
+        "clusters": { "$ref": "#/components/schemas/v1alpha1ClusterGenerator" },
+        "pullRequest": { "$ref": "#/components/schemas/v1alpha1PullRequestGenerator" }
+      }
+    }
+  }
+]

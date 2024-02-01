@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetGenerator",
+    "schema": {
+      "description": "ApplicationSetGenerator represents a generator at the top level of an ApplicationSet.",
+      "type": "object",
+      "properties": {
+        "git": { "$ref": "#/components/schemas/v1alpha1GitGenerator" },
+        "plugin": { "$ref": "#/components/schemas/v1alpha1PluginGenerator" },
+        "merge": { "$ref": "#/components/schemas/v1alpha1MergeGenerator" },
+        "clusterDecisionResource": { "$ref": "#/components/schemas/v1alpha1DuckTypeGenerator" },
+        "scmProvider": { "$ref": "#/components/schemas/v1alpha1SCMProviderGenerator" },
+        "selector": { "$ref": "#/components/schemas/v1LabelSelector" },
+        "list": { "$ref": "#/components/schemas/v1alpha1ListGenerator" },
+        "matrix": { "$ref": "#/components/schemas/v1alpha1MatrixGenerator" },
+        "clusters": { "$ref": "#/components/schemas/v1alpha1ClusterGenerator" },
+        "pullRequest": { "$ref": "#/components/schemas/v1alpha1PullRequestGenerator" }
+      }
+    }
+  }
+]

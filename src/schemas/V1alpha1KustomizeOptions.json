@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1KustomizeOptions",
+    "schema": {
+      "title": "KustomizeOptions are options for kustomize to use when building manifests",
+      "type": "object",
+      "properties": {
+        "binaryPath": { "title": "BinaryPath holds optional path to kustomize binary", "type": "string" },
+        "buildOptions": {
+          "title": "BuildOptions is a string of build parameters to use when calling `kustomize build`",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

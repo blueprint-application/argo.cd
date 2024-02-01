@@ -1,0 +1,12 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ManagedNamespaceMetadata",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "annotations": { "additionalProperties": { "type": "string" }, "type": "object" },
+        "labels": { "additionalProperties": { "type": "string" }, "type": "object" }
+      }
+    }
+  }
+]

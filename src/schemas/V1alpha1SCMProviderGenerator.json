@@ -1,0 +1,34 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SCMProviderGenerator",
+    "schema": {
+      "description": "SCMProviderGenerator defines a generator that scrapes a SCMaaS API to find candidate repos.",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "gitea": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorGitea" },
+        "github": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorGithub" },
+        "bitbucketServer": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorBitbucketServer" },
+        "azureDevOps": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorAzureDevOps" },
+        "values": {
+          "additionalProperties": { "type": "string" },
+          "title": "Values contains key/value pairs which are passed directly as parameters to the template",
+          "type": "object"
+        },
+        "awsCodeCommit": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorAWSCodeCommit" },
+        "gitlab": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorGitlab" },
+        "filters": {
+          "description": "Filters for which repos should be considered.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorFilter" }
+        },
+        "bitbucket": { "$ref": "#/components/schemas/v1alpha1SCMProviderGeneratorBitbucket" },
+        "requeueAfterSeconds": { "format": "int64", "description": "Standard parameters.", "type": "string" },
+        "cloneProtocol": {
+          "description": "Which protocol to use for the SCM URL. Default is provider-specific but ssh if possible. Not all providers\nnecessarily support all protocols.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

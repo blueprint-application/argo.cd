@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/clusterHelp",
+    "schema": {
+      "title": "Help settings",
+      "type": "object",
+      "properties": {
+        "binaryUrls": {
+          "additionalProperties": { "type": "string" },
+          "title": "the URLs for downloading argocd binaries",
+          "type": "object"
+        },
+        "chatText": { "title": "the text for getting chat help, defaults to \"Chat now!\"", "type": "string" },
+        "chatUrl": {
+          "title": "the URL for getting chat help, this will typically be your Slack channel for support",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

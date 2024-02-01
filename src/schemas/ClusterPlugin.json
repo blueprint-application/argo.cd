@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/clusterPlugin",
+    "schema": {
+      "title": "Plugin settings",
+      "type": "object",
+      "properties": { "name": { "title": "the name of the plugin, e.g. \"kasane\"", "type": "string" } }
+    }
+  }
+]

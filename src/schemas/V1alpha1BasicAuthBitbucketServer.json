@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1BasicAuthBitbucketServer",
+    "schema": {
+      "description": "BasicAuthBitbucketServer defines the username/(password or personal access token) for Basic auth.",
+      "type": "object",
+      "properties": {
+        "passwordRef": { "$ref": "#/components/schemas/v1alpha1SecretRef" },
+        "username": { "title": "Username for Basic auth", "type": "string" }
+      }
+    }
+  }
+]

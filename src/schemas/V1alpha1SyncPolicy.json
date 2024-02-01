@@ -1,0 +1,19 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SyncPolicy",
+    "schema": {
+      "title": "SyncPolicy controls when a sync will be performed in response to updates in git",
+      "type": "object",
+      "properties": {
+        "automated": { "$ref": "#/components/schemas/v1alpha1SyncPolicyAutomated" },
+        "managedNamespaceMetadata": { "$ref": "#/components/schemas/v1alpha1ManagedNamespaceMetadata" },
+        "retry": { "$ref": "#/components/schemas/v1alpha1RetryStrategy" },
+        "syncOptions": {
+          "title": "Options allow you to specify whole app sync-options",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+]

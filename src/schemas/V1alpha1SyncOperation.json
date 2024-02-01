@@ -1,0 +1,50 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SyncOperation",
+    "schema": {
+      "description": "SyncOperation contains details about a sync operation.",
+      "type": "object",
+      "properties": {
+        "dryRun": {
+          "title": "DryRun specifies to perform a `kubectl apply --dry-run` without actually performing the sync",
+          "type": "boolean"
+        },
+        "sources": {
+          "title": "Sources overrides the source definition set in the application.\nThis is typically set in a Rollback operation and is nil during a Sync operation",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" }
+        },
+        "prune": {
+          "title": "Prune specifies to delete resources from the cluster that are no longer tracked in git",
+          "type": "boolean"
+        },
+        "manifests": {
+          "title": "Manifests is an optional field that overrides sync source with a local directory for development",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "resources": {
+          "title": "Resources describes which resources shall be part of the sync",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1SyncOperationResource" }
+        },
+        "revisions": {
+          "description": "Revisions is the list of revision (Git) or chart version (Helm) which to sync each source in sources field for the application to\nIf omitted, will use the revision specified in app spec.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" },
+        "syncStrategy": { "$ref": "#/components/schemas/v1alpha1SyncStrategy" },
+        "syncOptions": {
+          "title": "SyncOptions provide per-sync sync-options, e.g. Validate=false",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "revision": {
+          "description": "Revision is the revision (Git) or chart version (Helm) which to sync the application to\nIf omitted, will use the revision specified in app spec.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

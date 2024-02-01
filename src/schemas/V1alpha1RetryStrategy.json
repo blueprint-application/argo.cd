@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1RetryStrategy",
+    "schema": {
+      "title": "RetryStrategy contains information about the strategy to apply when a sync failed",
+      "type": "object",
+      "properties": {
+        "backoff": { "$ref": "#/components/schemas/v1alpha1Backoff" },
+        "limit": {
+          "format": "int64",
+          "description": "Limit is the maximum number of attempts for retrying a failed sync. If set to 0, no retries will be performed.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

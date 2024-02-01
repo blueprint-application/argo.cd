@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1TagFilter",
+    "schema": { "type": "object", "properties": { "value": { "type": "string" }, "key": { "type": "string" } } }
+  }
+]

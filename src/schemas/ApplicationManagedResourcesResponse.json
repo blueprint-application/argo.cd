@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/applicationManagedResourcesResponse",
+    "schema": {
+      "type": "object",
+      "properties": { "items": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ResourceDiff" } } }
+    }
+  }
+]

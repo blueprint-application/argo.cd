@@ -1,0 +1,36 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceResult",
+    "schema": {
+      "title": "ResourceResult holds the operation result details of a specific resource",
+      "type": "object",
+      "properties": {
+        "syncPhase": {
+          "title": "SyncPhase indicates the particular phase of the sync that this result was acquired in",
+          "type": "string"
+        },
+        "kind": { "title": "Kind specifies the API kind of the resource", "type": "string" },
+        "name": { "title": "Name specifies the name of the resource", "type": "string" },
+        "namespace": { "title": "Namespace specifies the target namespace of the resource", "type": "string" },
+        "hookPhase": {
+          "description": "HookPhase contains the state of any operation associated with this resource OR hook\nThis can also contain values for non-hook resources.",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message contains an informational or error message for the last sync OR operation",
+          "type": "string"
+        },
+        "version": { "title": "Version specifies the API version of the resource", "type": "string" },
+        "hookType": {
+          "title": "HookType specifies the type of the hook. Empty for non-hook resources",
+          "type": "string"
+        },
+        "group": { "title": "Group specifies the API group of the resource", "type": "string" },
+        "status": {
+          "title": "Status holds the final result of the sync. Will be empty if the resources is yet to be applied/pruned and is always zero-value for hooks",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

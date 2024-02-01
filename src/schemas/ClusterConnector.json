@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/clusterConnector",
+    "schema": { "type": "object", "properties": { "name": { "type": "string" }, "type": { "type": "string" } } }
+  }
+]

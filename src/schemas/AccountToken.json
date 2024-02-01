@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/accountToken",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "issuedAt": { "format": "int64", "type": "string" },
+        "expiresAt": { "format": "int64", "type": "string" }
+      }
+    }
+  }
+]

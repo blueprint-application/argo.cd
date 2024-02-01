@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/accountCanIResponse",
+    "schema": { "type": "object", "properties": { "value": { "type": "string" } } }
+  }
+]

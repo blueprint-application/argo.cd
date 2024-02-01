@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1OperationInitiator",
+    "schema": {
+      "title": "OperationInitiator contains information about the initiator of an operation",
+      "type": "object",
+      "properties": {
+        "automated": {
+          "description": "Automated is set to true if operation was initiated automatically by the application controller.",
+          "type": "boolean"
+        },
+        "username": { "title": "Username contains the name of a user who started operation", "type": "string" }
+      }
+    }
+  }
+]

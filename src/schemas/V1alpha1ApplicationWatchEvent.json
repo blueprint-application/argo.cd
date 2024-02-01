@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationWatchEvent",
+    "schema": {
+      "description": "ApplicationWatchEvent contains information about application change.",
+      "type": "object",
+      "properties": {
+        "application": { "$ref": "#/components/schemas/v1alpha1Application" },
+        "type": { "type": "string" }
+      }
+    }
+  }
+]

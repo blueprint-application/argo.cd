@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SCMProviderGeneratorBitbucketServer",
+    "schema": {
+      "description": "SCMProviderGeneratorBitbucketServer defines connection info specific to Bitbucket Server.",
+      "type": "object",
+      "properties": {
+        "basicAuth": { "$ref": "#/components/schemas/v1alpha1BasicAuthBitbucketServer" },
+        "allBranches": { "description": "Scan all branches instead of just the default branch.", "type": "boolean" },
+        "project": { "description": "Project to scan. Required.", "type": "string" },
+        "api": { "description": "The Bitbucket Server REST API URL to talk to. Required.", "type": "string" }
+      }
+    }
+  }
+]

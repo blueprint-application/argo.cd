@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1PullRequestGeneratorAzureDevOps",
+    "schema": {
+      "description": "PullRequestGeneratorAzureDevOps defines connection info specific to AzureDevOps.",
+      "type": "object",
+      "properties": {
+        "organization": { "description": "Azure DevOps org to scan. Required.", "type": "string" },
+        "repo": { "description": "Azure DevOps repo name to scan. Required.", "type": "string" },
+        "project": { "description": "Azure DevOps project name to scan. Required.", "type": "string" },
+        "api": {
+          "description": "The Azure DevOps API URL to talk to. If blank, use https://dev.azure.com/.",
+          "type": "string"
+        },
+        "labels": {
+          "title": "Labels is used to filter the PRs that you want to target",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "tokenRef": { "$ref": "#/components/schemas/v1alpha1SecretRef" }
+      }
+    }
+  }
+]

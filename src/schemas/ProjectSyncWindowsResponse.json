@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/projectSyncWindowsResponse",
+    "schema": {
+      "type": "object",
+      "properties": { "windows": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1SyncWindow" } } }
+    }
+  }
+]

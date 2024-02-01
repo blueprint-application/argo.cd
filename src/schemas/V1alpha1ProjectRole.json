@@ -1,0 +1,28 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ProjectRole",
+    "schema": {
+      "title": "ProjectRole represents a role that has access to a project",
+      "type": "object",
+      "properties": {
+        "name": { "title": "Name is a name for this role", "type": "string" },
+        "policies": {
+          "title": "Policies Stores a list of casbin formatted strings that define access policies for the role in the project",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "description": { "title": "Description is a description of the role", "type": "string" },
+        "groups": {
+          "title": "Groups are a list of OIDC group claims bound to this role",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "jwtTokens": {
+          "title": "JWTTokens are a list of generated JWT tokens bound to this role",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1JWTToken" }
+        }
+      }
+    }
+  }
+]

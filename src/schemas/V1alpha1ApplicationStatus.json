@@ -1,0 +1,54 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationStatus",
+    "schema": {
+      "title": "ApplicationStatus contains status information for the application",
+      "type": "object",
+      "properties": {
+        "summary": { "$ref": "#/components/schemas/v1alpha1ApplicationSummary" },
+        "sourceTypes": {
+          "title": "SourceTypes specifies the type of the sources included in the application",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observedAt": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "operationState": { "$ref": "#/components/schemas/v1alpha1OperationState" },
+        "controllerNamespace": {
+          "title": "ControllerNamespace indicates the namespace in which the application controller is located",
+          "type": "string"
+        },
+        "reconciledAt": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "health": { "$ref": "#/components/schemas/v1alpha1HealthStatus" },
+        "resources": {
+          "title": "Resources is a list of Kubernetes resources managed by this application",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ResourceStatus" }
+        },
+        "history": {
+          "title": "History contains information about the application's sync history",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1RevisionHistory" }
+        },
+        "sync": { "$ref": "#/components/schemas/v1alpha1SyncStatus" },
+        "sourceType": { "title": "SourceType specifies the type of this application", "type": "string" },
+        "conditions": {
+          "title": "Conditions is a list of currently observed application conditions",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationCondition" }
+        },
+        "resourceHealthSource": {
+          "title": "ResourceHealthSource indicates where the resource health status is stored: inline if not set or appTree",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

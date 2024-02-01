@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceNode",
+    "schema": {
+      "allOf": [{ "$ref": "#/components/schemas/v1alpha1ResourceRef" }],
+      "title": "ResourceNode contains information about live resource and its children\nTODO: describe members of this type",
+      "properties": {
+        "createdAt": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "parentRefs": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ResourceRef" } },
+        "resourceVersion": { "type": "string" },
+        "health": { "$ref": "#/components/schemas/v1alpha1HealthStatus" },
+        "info": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1InfoItem" } },
+        "networkingInfo": { "$ref": "#/components/schemas/v1alpha1ResourceNetworkingInfo" }
+      }
+    }
+  }
+]

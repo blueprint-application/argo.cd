@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/protobufAny",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
+          "format": "byte",
+          "type": "string"
+        },
+        "type_url": { "type": "string" }
+      }
+    }
+  }
+]

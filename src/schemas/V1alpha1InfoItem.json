@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1InfoItem",
+    "schema": {
+      "title": "InfoItem contains arbitrary, human readable information about an application",
+      "type": "object",
+      "properties": {
+        "name": { "description": "Name is a human readable title for this piece of information.", "type": "string" },
+        "value": { "description": "Value is human readable content.", "type": "string" }
+      }
+    }
+  }
+]

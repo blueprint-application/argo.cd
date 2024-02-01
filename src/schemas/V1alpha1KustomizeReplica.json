@@ -1,0 +1,12 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1KustomizeReplica",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "count": { "$ref": "#/components/schemas/intstrIntOrString" },
+        "name": { "title": "Name of Deployment or StatefulSet", "type": "string" }
+      }
+    }
+  }
+]

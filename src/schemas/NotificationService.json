@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/notificationService",
+    "schema": { "type": "object", "properties": { "name": { "type": "string" } } }
+  }
+]

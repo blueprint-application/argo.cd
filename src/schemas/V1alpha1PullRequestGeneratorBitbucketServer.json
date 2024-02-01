@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1PullRequestGeneratorBitbucketServer",
+    "schema": {
+      "description": "PullRequestGeneratorBitbucketServer defines connection info specific to BitbucketServer.",
+      "type": "object",
+      "properties": {
+        "basicAuth": { "$ref": "#/components/schemas/v1alpha1BasicAuthBitbucketServer" },
+        "repo": { "description": "Repo name to scan. Required.", "type": "string" },
+        "project": { "description": "Project to scan. Required.", "type": "string" },
+        "api": {
+          "description": "The Bitbucket REST API URL to talk to e.g. https://bitbucket.org/rest Required.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

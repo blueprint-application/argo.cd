@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1EventList",
+    "schema": {
+      "description": "EventList is a list of events.",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ListMeta" },
+        "items": { "title": "List of events", "type": "array", "items": { "$ref": "#/components/schemas/v1Event" } }
+      }
+    }
+  }
+]

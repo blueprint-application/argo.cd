@@ -1,0 +1,26 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ClusterCacheInfo",
+    "schema": {
+      "title": "ClusterCacheInfo contains information about the cluster cache",
+      "type": "object",
+      "properties": {
+        "apisCount": {
+          "format": "int64",
+          "title": "APIsCount holds number of observed Kubernetes API count",
+          "type": "string"
+        },
+        "lastCacheSyncTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "resourcesCount": {
+          "format": "int64",
+          "title": "ResourcesCount holds number of observed Kubernetes resources",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1HostResourceInfo",
+    "schema": {
+      "title": "TODO: describe this type",
+      "type": "object",
+      "properties": {
+        "requestedByApp": { "format": "int64", "type": "string" },
+        "requestedByNeighbors": { "format": "int64", "type": "string" },
+        "resourceName": { "type": "string" },
+        "capacity": { "format": "int64", "type": "string" }
+      }
+    }
+  }
+]

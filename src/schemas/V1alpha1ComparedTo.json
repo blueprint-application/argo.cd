@@ -1,0 +1,23 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ComparedTo",
+    "schema": {
+      "title": "ComparedTo contains application source and target which was used for resources comparison",
+      "type": "object",
+      "properties": {
+        "sources": {
+          "title": "Sources is a reference to the application's multiple sources used for comparison",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" }
+        },
+        "destination": { "$ref": "#/components/schemas/v1alpha1ApplicationDestination" },
+        "source": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" },
+        "ignoreDifferences": {
+          "title": "IgnoreDifferences is a reference to the application's ignored differences used for comparison",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ResourceIgnoreDifferences" }
+        }
+      }
+    }
+  }
+]

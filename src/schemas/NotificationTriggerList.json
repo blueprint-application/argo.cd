@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/notificationTriggerList",
+    "schema": {
+      "type": "object",
+      "properties": { "items": { "type": "array", "items": { "$ref": "#/components/schemas/notificationTrigger" } } }
+    }
+  }
+]

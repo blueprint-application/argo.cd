@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/applicationv1alpha1EnvEntry",
+    "schema": {
+      "title": "EnvEntry represents an entry in the application's environment",
+      "type": "object",
+      "properties": {
+        "name": { "title": "Name is the name of the variable, usually expressed in uppercase", "type": "string" },
+        "value": { "title": "Value is the value of the variable", "type": "string" }
+      }
+    }
+  }
+]

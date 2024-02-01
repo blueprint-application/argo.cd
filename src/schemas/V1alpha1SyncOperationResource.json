@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SyncOperationResource",
+    "schema": {
+      "description": "SyncOperationResource contains resources to sync.",
+      "type": "object",
+      "properties": {
+        "kind": { "type": "string" },
+        "name": { "type": "string" },
+        "namespace": { "type": "string" },
+        "group": { "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ClusterConfig",
+    "schema": {
+      "description": "ClusterConfig is the configuration attributes. This structure is subset of the go-client\nrest.Config with annotations added for marshalling.",
+      "type": "object",
+      "properties": {
+        "awsAuthConfig": { "$ref": "#/components/schemas/v1alpha1AWSAuthConfig" },
+        "password": { "type": "string" },
+        "tlsClientConfig": { "$ref": "#/components/schemas/v1alpha1TLSClientConfig" },
+        "bearerToken": {
+          "description": "Server requires Bearer authentication. This client will not attempt to use\nrefresh tokens for an OAuth2 flow.\nTODO: demonstrate an OAuth2 compatible client.",
+          "type": "string"
+        },
+        "execProviderConfig": { "$ref": "#/components/schemas/v1alpha1ExecProviderConfig" },
+        "username": { "title": "Server requires Basic authentication", "type": "string" }
+      }
+    }
+  }
+]

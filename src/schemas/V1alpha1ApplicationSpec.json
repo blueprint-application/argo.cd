@@ -1,0 +1,38 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSpec",
+    "schema": {
+      "description": "ApplicationSpec represents desired application state. Contains link to repository with application definition and additional parameters link definition revision.",
+      "type": "object",
+      "properties": {
+        "sources": {
+          "title": "Sources is a reference to the location of the application's manifests or chart",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" }
+        },
+        "destination": { "$ref": "#/components/schemas/v1alpha1ApplicationDestination" },
+        "project": {
+          "description": "Project is a reference to the project this application belongs to.\nThe empty string means that application belongs to the 'default' project.",
+          "type": "string"
+        },
+        "revisionHistoryLimit": {
+          "format": "int64",
+          "description": "RevisionHistoryLimit limits the number of items kept in the application's revision history, which is used for informational purposes as well as for rollbacks to previous versions.\nThis should only be changed in exceptional circumstances.\nSetting to zero will store no history. This will reduce storage used.\nIncreasing will increase the space used to store the history, so we do not recommend increasing it.\nDefault is 10.",
+          "type": "string"
+        },
+        "source": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" },
+        "ignoreDifferences": {
+          "title": "IgnoreDifferences is a list of resources and their fields which should be ignored during comparison",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ResourceIgnoreDifferences" }
+        },
+        "syncPolicy": { "$ref": "#/components/schemas/v1alpha1SyncPolicy" },
+        "info": {
+          "title": "Info contains a list of information (URLs, email addresses, and plain text) that relates to the application",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1Info" }
+        }
+      }
+    }
+  }
+]

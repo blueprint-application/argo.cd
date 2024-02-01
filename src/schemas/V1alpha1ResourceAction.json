@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceAction",
+    "schema": {
+      "title": "TODO: describe this type\nTODO: describe members of this type",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "name": { "type": "string" },
+        "disabled": { "type": "boolean" },
+        "params": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ResourceActionParam" } },
+        "iconClass": { "type": "string" }
+      }
+    }
+  }
+]

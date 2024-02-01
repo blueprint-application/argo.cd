@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1EventSeries",
+    "schema": {
+      "description": "EventSeries contain information on series of events, i.e. thing that was/is happening\ncontinuously for some time.",
+      "type": "object",
+      "properties": {
+        "count": {
+          "format": "int32",
+          "title": "Number of occurrences in this series up to the last heartbeat time",
+          "type": "integer"
+        },
+        "lastObservedTime": { "$ref": "#/components/schemas/v1MicroTime" }
+      }
+    }
+  }
+]

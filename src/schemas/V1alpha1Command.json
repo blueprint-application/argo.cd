@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1Command",
+    "schema": {
+      "title": "Command holds binary path and arguments list",
+      "type": "object",
+      "properties": {
+        "args": { "type": "array", "items": { "type": "string" } },
+        "command": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryRepoAppsResponse",
+    "schema": {
+      "title": "RepoAppsResponse contains applications of specified repository",
+      "type": "object",
+      "properties": { "items": { "type": "array", "items": { "$ref": "#/components/schemas/repositoryAppInfo" } } }
+    }
+  }
+]

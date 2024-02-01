@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/runtimeStreamError",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "http_code": { "format": "int32", "type": "integer" },
+        "details": { "type": "array", "items": { "$ref": "#/components/schemas/protobufAny" } },
+        "http_status": { "type": "string" },
+        "message": { "type": "string" },
+        "grpc_code": { "format": "int32", "type": "integer" }
+      }
+    }
+  }
+]

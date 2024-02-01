@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/clusterOIDCConfig",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "idTokenClaims": { "additionalProperties": { "$ref": "#/components/schemas/oidcClaim" }, "type": "object" },
+        "clientID": { "type": "string" },
+        "name": { "type": "string" },
+        "cliClientID": { "type": "string" },
+        "scopes": { "type": "array", "items": { "type": "string" } },
+        "issuer": { "type": "string" }
+      }
+    }
+  }
+]

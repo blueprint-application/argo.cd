@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationResourceResponse",
+    "schema": { "type": "object", "properties": { "manifest": { "type": "string" } } }
+  }
+]

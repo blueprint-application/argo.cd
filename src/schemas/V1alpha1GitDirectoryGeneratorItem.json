@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1GitDirectoryGeneratorItem",
+    "schema": { "type": "object", "properties": { "path": { "type": "string" }, "exclude": { "type": "boolean" } } }
+  }
+]

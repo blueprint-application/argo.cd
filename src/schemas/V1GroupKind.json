@@ -1,0 +1,11 @@
+[
+  {
+    "ref": "#/components/schemas/v1GroupKind",
+    "schema": {
+      "description": "+protobuf.options.(gogoproto.goproto_stringer)=false",
+      "title": "GroupKind specifies a Group and a Kind, but does not force a version.  This is useful for identifying\nconcepts during lookup stages without having partially valid types",
+      "type": "object",
+      "properties": { "kind": { "type": "string" }, "group": { "type": "string" } }
+    }
+  }
+]

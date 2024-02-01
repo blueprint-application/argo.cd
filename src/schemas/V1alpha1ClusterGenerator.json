@@ -1,0 +1,18 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ClusterGenerator",
+    "schema": {
+      "description": "ClusterGenerator defines a generator to match against clusters registered with ArgoCD.",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "values": {
+          "additionalProperties": { "type": "string" },
+          "title": "Values contains key/value pairs which are passed directly as parameters to the template",
+          "type": "object"
+        },
+        "selector": { "$ref": "#/components/schemas/v1LabelSelector" }
+      }
+    }
+  }
+]

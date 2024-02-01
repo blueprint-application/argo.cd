@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1MatrixGenerator",
+    "schema": {
+      "description": "MatrixGenerator generates the cartesian product of two sets of parameters. The parameters are defined by two nested\ngenerators.",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "generators": {
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSetNestedGenerator" }
+        }
+      }
+    }
+  }
+]

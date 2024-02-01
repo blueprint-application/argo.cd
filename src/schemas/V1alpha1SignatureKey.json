@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SignatureKey",
+    "schema": {
+      "title": "SignatureKey is the specification of a key required to verify commit signatures with",
+      "type": "object",
+      "properties": { "keyID": { "title": "The ID of the key in hexadecimal notation", "type": "string" } }
+    }
+  }
+]

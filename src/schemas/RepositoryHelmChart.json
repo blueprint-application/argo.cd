@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryHelmChart",
+    "schema": {
+      "type": "object",
+      "properties": { "versions": { "type": "array", "items": { "type": "string" } }, "name": { "type": "string" } }
+    }
+  }
+]

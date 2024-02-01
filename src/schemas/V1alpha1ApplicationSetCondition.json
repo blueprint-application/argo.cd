@@ -1,0 +1,26 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetCondition",
+    "schema": {
+      "title": "ApplicationSetCondition contains details about an applicationset condition, which is usally an error or warning",
+      "type": "object",
+      "properties": {
+        "reason": {
+          "title": "Single word camelcase representing the reason for the status eg ErrorOccurred",
+          "type": "string"
+        },
+        "lastTransitionTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message contains human-readable message indicating details about condition",
+          "type": "string"
+        },
+        "type": { "title": "Type is an applicationset condition type", "type": "string" },
+        "status": { "title": "True/False/Unknown", "type": "string" }
+      }
+    }
+  }
+]

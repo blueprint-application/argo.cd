@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/applicationLinkInfo",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "title": { "type": "string" },
+        "iconClass": { "type": "string" },
+        "url": { "type": "string" }
+      }
+    }
+  }
+]

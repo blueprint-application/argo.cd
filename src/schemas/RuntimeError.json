@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/runtimeError",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "code": { "format": "int32", "type": "integer" },
+        "details": { "type": "array", "items": { "$ref": "#/components/schemas/protobufAny" } },
+        "error": { "type": "string" },
+        "message": { "type": "string" }
+      }
+    }
+  }
+]

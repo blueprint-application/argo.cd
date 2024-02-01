@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/projectDetailedProjectsResponse",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "globalProjects": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1AppProject" } },
+        "repositories": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1Repository" } },
+        "project": { "$ref": "#/components/schemas/v1alpha1AppProject" },
+        "clusters": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1Cluster" } }
+      }
+    }
+  }
+]

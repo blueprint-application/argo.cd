@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceNetworkingInfo",
+    "schema": {
+      "title": "ResourceNetworkingInfo holds networking resource related information\nTODO: describe members of this type",
+      "type": "object",
+      "properties": {
+        "ingress": { "type": "array", "items": { "$ref": "#/components/schemas/v1LoadBalancerIngress" } },
+        "targetRefs": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ResourceRef" } },
+        "targetLabels": { "additionalProperties": { "type": "string" }, "type": "object" },
+        "externalURLs": {
+          "description": "ExternalURLs holds list of URLs which should be available externally. List is populated for ingress resources using rules hostnames.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "labels": { "additionalProperties": { "type": "string" }, "type": "object" }
+      }
+    }
+  }
+]

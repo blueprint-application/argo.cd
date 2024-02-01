@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SyncOperationResult",
+    "schema": {
+      "title": "SyncOperationResult represent result of sync operation",
+      "type": "object",
+      "properties": {
+        "sources": {
+          "title": "Source records the application source information of the sync, used for comparing auto-sync",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" }
+        },
+        "resources": {
+          "title": "Resources contains a list of sync result items for each individual resource in a sync operation",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ResourceResult" }
+        },
+        "revisions": {
+          "title": "Revisions holds the revision this sync operation was performed for respective indexed source in sources field",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "managedNamespaceMetadata": { "$ref": "#/components/schemas/v1alpha1ManagedNamespaceMetadata" },
+        "source": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" },
+        "revision": { "title": "Revision holds the revision this sync operation was performed to", "type": "string" }
+      }
+    }
+  }
+]

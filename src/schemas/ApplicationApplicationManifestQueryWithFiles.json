@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationManifestQueryWithFiles",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "checksum": { "type": "string" },
+        "name": { "type": "string" },
+        "project": { "type": "string" },
+        "appNamespace": { "type": "string" }
+      }
+    }
+  }
+]

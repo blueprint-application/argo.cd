@@ -1,0 +1,27 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ExecProviderConfig",
+    "schema": {
+      "title": "ExecProviderConfig is config used to call an external command to perform cluster authentication\nSee: https://godoc.org/k8s.io/client-go/tools/clientcmd/api#ExecConfig",
+      "type": "object",
+      "properties": {
+        "args": {
+          "title": "Arguments to pass to the command when executing it",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "apiVersion": { "title": "Preferred input version of the ExecInfo", "type": "string" },
+        "env": {
+          "additionalProperties": { "type": "string" },
+          "title": "Env defines additional environment variables to expose to the process",
+          "type": "object"
+        },
+        "installHint": {
+          "title": "This text is shown to the user when the executable doesn't seem to be present",
+          "type": "string"
+        },
+        "command": { "title": "Command to execute", "type": "string" }
+      }
+    }
+  }
+]

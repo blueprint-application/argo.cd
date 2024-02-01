@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetSpec",
+    "schema": {
+      "description": "ApplicationSetSpec represents a class of application set state.",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "generators": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSetGenerator" } },
+        "applyNestedSelectors": {
+          "title": "ApplyNestedSelectors enables selectors defined within the generators of two level-nested matrix or merge generators",
+          "type": "boolean"
+        },
+        "preservedFields": { "$ref": "#/components/schemas/v1alpha1ApplicationPreservedFields" },
+        "goTemplateOptions": { "type": "array", "items": { "type": "string" } },
+        "strategy": { "$ref": "#/components/schemas/v1alpha1ApplicationSetStrategy" },
+        "syncPolicy": { "$ref": "#/components/schemas/v1alpha1ApplicationSetSyncPolicy" },
+        "goTemplate": { "type": "boolean" }
+      }
+    }
+  }
+]

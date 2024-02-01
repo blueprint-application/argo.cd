@@ -1,0 +1,23 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1SyncPolicyAutomated",
+    "schema": {
+      "title": "SyncPolicyAutomated controls the behavior of an automated sync",
+      "type": "object",
+      "properties": {
+        "allowEmpty": {
+          "title": "AllowEmpty allows apps have zero live resources (default: false)",
+          "type": "boolean"
+        },
+        "selfHeal": {
+          "title": "SelfHeal specifies whether to revert resources back to their desired state upon modification in the cluster (default: false)",
+          "type": "boolean"
+        },
+        "prune": {
+          "title": "Prune specifies whether to delete resources from the cluster that are not found in the sources anymore as part of automated sync (default: false)",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryPluginAppSpec",
+    "schema": {
+      "title": "PluginAppSpec contains details about a plugin-type Application",
+      "type": "object",
+      "properties": {
+        "parametersAnnouncement": {
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/repositoryParameterAnnouncement" }
+        }
+      }
+    }
+  }
+]

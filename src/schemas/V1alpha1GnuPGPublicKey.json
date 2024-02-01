@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1GnuPGPublicKey",
+    "schema": {
+      "title": "GnuPGPublicKey is a representation of a GnuPG public key",
+      "type": "object",
+      "properties": {
+        "owner": { "title": "Owner holds the owner identification, e.g. a name and e-mail address", "type": "string" },
+        "trust": { "title": "Trust holds the level of trust assigned to this key", "type": "string" },
+        "keyData": { "title": "KeyData holds the raw key data, in base64 encoded format", "type": "string" },
+        "fingerprint": { "title": "Fingerprint is the fingerprint of the key", "type": "string" },
+        "keyID": { "title": "KeyID specifies the key ID, in hexadecimal string format", "type": "string" },
+        "subType": { "title": "SubType holds the key's sub type (e.g. rsa4096)", "type": "string" }
+      }
+    }
+  }
+]

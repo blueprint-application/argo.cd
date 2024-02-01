@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1JWTTokens",
+    "schema": {
+      "title": "JWTTokens represents a list of JWT tokens",
+      "type": "object",
+      "properties": { "items": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1JWTToken" } } }
+    }
+  }
+]

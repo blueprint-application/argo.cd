@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/accountAccount",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "capabilities": { "type": "array", "items": { "type": "string" } },
+        "name": { "type": "string" },
+        "tokens": { "type": "array", "items": { "$ref": "#/components/schemas/accountToken" } },
+        "enabled": { "type": "boolean" }
+      }
+    }
+  }
+]

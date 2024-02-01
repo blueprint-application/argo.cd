@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1PluginInput",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "parameters": {
+          "description": "Parameters contains the information to pass to the plugin. It is a map. The keys must be strings, and the\nvalues can be any type.",
+          "additionalProperties": { "$ref": "#/components/schemas/v1JSON" },
+          "type": "object"
+        }
+      }
+    }
+  }
+]

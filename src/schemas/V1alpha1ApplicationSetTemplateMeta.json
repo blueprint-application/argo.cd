@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetTemplateMeta",
+    "schema": {
+      "title": "ApplicationSetTemplateMeta represents the Argo CD application fields that may\nbe used for Applications generated from the ApplicationSet (based on metav1.ObjectMeta)",
+      "type": "object",
+      "properties": {
+        "finalizers": { "type": "array", "items": { "type": "string" } },
+        "name": { "type": "string" },
+        "namespace": { "type": "string" },
+        "annotations": { "additionalProperties": { "type": "string" }, "type": "object" },
+        "labels": { "additionalProperties": { "type": "string" }, "type": "object" }
+      }
+    }
+  }
+]

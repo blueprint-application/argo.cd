@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ListGenerator",
+    "schema": {
+      "title": "ListGenerator include items info",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "elements": { "type": "array", "items": { "$ref": "#/components/schemas/v1JSON" } },
+        "elementsYaml": { "type": "string" }
+      }
+    }
+  }
+]

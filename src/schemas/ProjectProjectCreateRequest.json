@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/projectProjectCreateRequest",
+    "schema": {
+      "description": "ProjectCreateRequest defines project creation parameters.",
+      "type": "object",
+      "properties": {
+        "upsert": { "type": "boolean" },
+        "project": { "$ref": "#/components/schemas/v1alpha1AppProject" }
+      }
+    }
+  }
+]

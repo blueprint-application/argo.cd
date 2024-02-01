@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSummary",
+    "schema": {
+      "title": "ApplicationSummary contains information about URLs and container images used by an application",
+      "type": "object",
+      "properties": {
+        "images": {
+          "description": "Images holds all images of application child resources.",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "externalURLs": {
+          "description": "ExternalURLs holds all external URLs of application child resources.",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+]

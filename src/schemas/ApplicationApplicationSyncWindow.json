@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationSyncWindow",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "duration": { "type": "string" },
+        "schedule": { "type": "string" },
+        "kind": { "type": "string" },
+        "manualSync": { "type": "boolean" }
+      }
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSourceKustomize",
+    "schema": {
+      "title": "ApplicationSourceKustomize holds options specific to an Application source specific to Kustomize",
+      "type": "object",
+      "properties": {
+        "commonLabels": {
+          "additionalProperties": { "type": "string" },
+          "title": "CommonLabels is a list of additional labels to add to rendered manifests",
+          "type": "object"
+        },
+        "images": {
+          "title": "Images is a list of Kustomize image override specifications",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "namePrefix": { "title": "NamePrefix is a prefix appended to resources for Kustomize apps", "type": "string" },
+        "replicas": {
+          "title": "Replicas is a list of Kustomize Replicas override specifications",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1KustomizeReplica" }
+        },
+        "forceCommonAnnotations": {
+          "title": "ForceCommonAnnotations specifies whether to force applying common annotations to resources for Kustomize apps",
+          "type": "boolean"
+        },
+        "namespace": { "title": "Namespace sets the namespace that Kustomize adds to all resources", "type": "string" },
+        "nameSuffix": { "title": "NameSuffix is a suffix appended to resources for Kustomize apps", "type": "string" },
+        "forceCommonLabels": {
+          "title": "ForceCommonLabels specifies whether to force applying common labels to resources for Kustomize apps",
+          "type": "boolean"
+        },
+        "commonAnnotationsEnvsubst": {
+          "title": "CommonAnnotationsEnvsubst specifies whether to apply env variables substitution for annotation values",
+          "type": "boolean"
+        },
+        "version": {
+          "title": "Version controls which version of Kustomize to use for rendering manifests",
+          "type": "string"
+        },
+        "commonAnnotations": {
+          "additionalProperties": { "type": "string" },
+          "title": "CommonAnnotations is a list of additional annotations to add to rendered manifests",
+          "type": "object"
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1OrphanedResourcesMonitorSettings",
+    "schema": {
+      "title": "OrphanedResourcesMonitorSettings holds settings of orphaned resources monitoring",
+      "type": "object",
+      "properties": {
+        "warn": {
+          "title": "Warn indicates if warning condition should be created for apps which have orphaned resources",
+          "type": "boolean"
+        },
+        "ignore": {
+          "title": "Ignore contains a list of resources that are to be excluded from orphaned resources monitoring",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1OrphanedResourceKey" }
+        }
+      }
+    }
+  }
+]

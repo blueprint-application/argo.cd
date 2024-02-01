@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1PluginGenerator",
+    "schema": {
+      "description": "PluginGenerator defines connection info specific to Plugin.",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "input": { "$ref": "#/components/schemas/v1alpha1PluginInput" },
+        "configMapRef": { "$ref": "#/components/schemas/v1alpha1PluginConfigMapRef" },
+        "values": {
+          "description": "Values contains key/value pairs which are passed directly as parameters to the template. These values will not be\nsent as parameters to the plugin.",
+          "additionalProperties": { "type": "string" },
+          "type": "object"
+        },
+        "requeueAfterSeconds": {
+          "format": "int64",
+          "description": "RequeueAfterSeconds determines how long the ApplicationSet controller will wait before reconciling the ApplicationSet again.",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

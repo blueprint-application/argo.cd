@@ -1,0 +1,19 @@
+[
+  {
+    "ref": "#/components/schemas/applicationLogEntry",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "timeStamp": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "last": { "type": "boolean" },
+        "timeStampStr": { "type": "string" },
+        "podName": { "type": "string" },
+        "content": { "type": "string" }
+      }
+    }
+  }
+]

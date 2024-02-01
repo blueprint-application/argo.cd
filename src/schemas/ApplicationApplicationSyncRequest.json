@@ -1,0 +1,23 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationSyncRequest",
+    "schema": {
+      "title": "ApplicationSyncRequest is a request to apply the config state to live state",
+      "type": "object",
+      "properties": {
+        "dryRun": { "type": "boolean" },
+        "prune": { "type": "boolean" },
+        "manifests": { "type": "array", "items": { "type": "string" } },
+        "name": { "type": "string" },
+        "project": { "type": "string" },
+        "resources": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1SyncOperationResource" } },
+        "retryStrategy": { "$ref": "#/components/schemas/v1alpha1RetryStrategy" },
+        "strategy": { "$ref": "#/components/schemas/v1alpha1SyncStrategy" },
+        "appNamespace": { "type": "string" },
+        "infos": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1Info" } },
+        "syncOptions": { "$ref": "#/components/schemas/applicationSyncOptions" },
+        "revision": { "type": "string" }
+      }
+    }
+  }
+]

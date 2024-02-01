@@ -1,0 +1,12 @@
+[
+  {
+    "ref": "#/components/schemas/applicationsetApplicationSetResponse",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "applicationset": { "$ref": "#/components/schemas/v1alpha1ApplicationSet" },
+        "project": { "type": "string" }
+      }
+    }
+  }
+]

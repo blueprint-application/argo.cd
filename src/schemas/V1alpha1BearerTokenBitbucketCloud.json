@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1BearerTokenBitbucketCloud",
+    "schema": {
+      "description": "BearerTokenBitbucketCloud defines the Bearer token for BitBucket AppToken auth.",
+      "type": "object",
+      "properties": { "tokenRef": { "$ref": "#/components/schemas/v1alpha1SecretRef" } }
+    }
+  }
+]

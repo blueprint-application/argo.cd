@@ -1,0 +1,21 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationCondition",
+    "schema": {
+      "title": "ApplicationCondition contains details about an application condition, which is usually an error or warning",
+      "type": "object",
+      "properties": {
+        "lastTransitionTime": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message contains human-readable message indicating details about condition",
+          "type": "string"
+        },
+        "type": { "title": "Type is an application condition type", "type": "string" }
+      }
+    }
+  }
+]

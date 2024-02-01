@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryHelmChartsResponse",
+    "schema": {
+      "type": "object",
+      "properties": { "items": { "type": "array", "items": { "$ref": "#/components/schemas/repositoryHelmChart" } } }
+    }
+  }
+]

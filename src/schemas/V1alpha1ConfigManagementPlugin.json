@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ConfigManagementPlugin",
+    "schema": {
+      "title": "ConfigManagementPlugin contains config management plugin configuration",
+      "type": "object",
+      "properties": {
+        "lockRepo": { "type": "boolean" },
+        "init": { "$ref": "#/components/schemas/v1alpha1Command" },
+        "name": { "type": "string" },
+        "generate": { "$ref": "#/components/schemas/v1alpha1Command" }
+      }
+    }
+  }
+]

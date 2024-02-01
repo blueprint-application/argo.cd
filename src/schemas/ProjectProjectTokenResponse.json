@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/projectProjectTokenResponse",
+    "schema": {
+      "description": "ProjectTokenResponse wraps the created token or returns an empty string if deleted.",
+      "type": "object",
+      "properties": { "token": { "type": "string" } }
+    }
+  }
+]

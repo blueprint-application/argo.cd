@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationList",
+    "schema": {
+      "title": "ApplicationList is list of Application resources\n+k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ListMeta" },
+        "items": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1Application" } }
+      }
+    }
+  }
+]

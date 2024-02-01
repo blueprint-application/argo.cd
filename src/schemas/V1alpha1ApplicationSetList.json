@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSetList",
+    "schema": {
+      "title": "ApplicationSetList contains a list of ApplicationSet\n+k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object\n+kubebuilder:object:root=true",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ListMeta" },
+        "items": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ApplicationSet" } }
+      }
+    }
+  }
+]

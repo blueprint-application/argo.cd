@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist-types",
+    "lib": [
+      "dom"
+    ],
+    "module": "esnext",
+    "outDir": "dist-es",
+    "target": "es6",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "mocha"
+    ]
+  },
+  "exclude": [
+    "dist-es",
+    "dist-types"
+  ]
+}

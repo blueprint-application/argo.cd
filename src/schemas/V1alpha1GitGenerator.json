@@ -1,0 +1,25 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1GitGenerator",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "pathParamPrefix": { "type": "string" },
+        "repoURL": { "type": "string" },
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "values": {
+          "additionalProperties": { "type": "string" },
+          "title": "Values contains key/value pairs which are passed directly as parameters to the template",
+          "type": "object"
+        },
+        "directories": {
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1GitDirectoryGeneratorItem" }
+        },
+        "files": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1GitFileGeneratorItem" } },
+        "requeueAfterSeconds": { "format": "int64", "type": "string" },
+        "revision": { "type": "string" }
+      }
+    }
+  }
+]

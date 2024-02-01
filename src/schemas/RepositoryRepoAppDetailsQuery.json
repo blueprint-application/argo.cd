@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryRepoAppDetailsQuery",
+    "schema": {
+      "title": "RepoAppDetailsQuery contains query information for app details request",
+      "type": "object",
+      "properties": {
+        "appName": { "type": "string" },
+        "appProject": { "type": "string" },
+        "source": { "$ref": "#/components/schemas/v1alpha1ApplicationSource" }
+      }
+    }
+  }
+]

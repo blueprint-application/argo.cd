@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/clusterClusterID",
+    "schema": {
+      "title": "ClusterID holds a cluster server URL or cluster name",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "type is the type of the specified cluster identifier ( \"server\" - default, \"name\" )",
+          "type": "string"
+        },
+        "value": { "title": "value holds the cluster server URL or cluster name", "type": "string" }
+      }
+    }
+  }
+]

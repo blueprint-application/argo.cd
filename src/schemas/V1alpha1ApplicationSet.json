@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSet",
+    "schema": {
+      "title": "ApplicationSet is a set of Application resources\n+genclient\n+genclient:noStatus\n+k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object\n+kubebuilder:resource:path=applicationsets,shortName=appset;appsets\n+kubebuilder:subresource:status",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ObjectMeta" },
+        "spec": { "$ref": "#/components/schemas/v1alpha1ApplicationSetSpec" },
+        "status": { "$ref": "#/components/schemas/v1alpha1ApplicationSetStatus" }
+      }
+    }
+  }
+]

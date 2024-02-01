@@ -1,0 +1,56 @@
+[
+  {
+    "ref": "#/components/schemas/v1Event",
+    "schema": {
+      "description": "Event is a report of an event somewhere in the cluster.  Events\nhave a limited retention time and triggers and messages may evolve\nwith time.  Event consumers should not rely on the timing of an event\nwith a given Reason reflecting a consistent underlying trigger, or the\ncontinued existence of events with that Reason.  Events should be\ntreated as informative, best-effort, supplemental data.",
+      "type": "object",
+      "properties": {
+        "reason": {
+          "title": "This should be a short, machine understandable string that gives the reason\nfor the transition into the object's current status.\nTODO: provide exact specification for format.\n+optional",
+          "type": "string"
+        },
+        "metadata": { "$ref": "#/components/schemas/v1ObjectMeta" },
+        "involvedObject": { "$ref": "#/components/schemas/v1ObjectReference" },
+        "reportingInstance": {
+          "title": "ID of the controller instance, e.g. `kubelet-xyzf`.\n+optional",
+          "type": "string"
+        },
+        "count": {
+          "format": "int32",
+          "title": "The number of times this event has occurred.\n+optional",
+          "type": "integer"
+        },
+        "source": { "$ref": "#/components/schemas/v1EventSource" },
+        "message": {
+          "title": "A human-readable description of the status of this operation.\nTODO: decide on maximum length.\n+optional",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type of this event (Normal, Warning), new types could be added in the future\n+optional",
+          "type": "string"
+        },
+        "reportingComponent": {
+          "title": "Name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`.\n+optional",
+          "type": "string"
+        },
+        "firstTimestamp": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "related": { "$ref": "#/components/schemas/v1ObjectReference" },
+        "lastTimestamp": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "series": { "$ref": "#/components/schemas/v1EventSeries" },
+        "eventTime": { "$ref": "#/components/schemas/v1MicroTime" },
+        "action": {
+          "title": "What action was taken/failed regarding to the Regarding object.\n+optional",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

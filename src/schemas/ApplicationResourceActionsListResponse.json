@@ -1,0 +1,11 @@
+[
+  {
+    "ref": "#/components/schemas/applicationResourceActionsListResponse",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "actions": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1ResourceAction" } }
+      }
+    }
+  }
+]

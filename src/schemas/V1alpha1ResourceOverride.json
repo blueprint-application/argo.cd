@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceOverride",
+    "schema": {
+      "title": "ResourceOverride holds configuration to customize resource diffing and health assessment\nTODO: describe the members of this type",
+      "type": "object",
+      "properties": {
+        "healthLua": { "type": "string" },
+        "knownTypeFields": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1KnownTypeField" } },
+        "useOpenLibs": { "type": "boolean" },
+        "actions": { "type": "string" },
+        "ignoreDifferences": { "$ref": "#/components/schemas/v1alpha1OverrideIgnoreDiff" },
+        "ignoreResourceUpdates": { "$ref": "#/components/schemas/v1alpha1OverrideIgnoreDiff" }
+      }
+    }
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/clusterDexConfig",
+    "schema": {
+      "type": "object",
+      "properties": { "connectors": { "type": "array", "items": { "$ref": "#/components/schemas/clusterConnector" } } }
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryManifestResponse",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "server": { "type": "string" },
+        "sourceType": { "type": "string" },
+        "manifests": { "type": "array", "items": { "type": "string" } },
+        "namespace": { "type": "string" },
+        "verifyResult": {
+          "title": "Raw response of git verify-commit operation (always the empty string for Helm)",
+          "type": "string"
+        },
+        "revision": { "title": "resolved revision", "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1AppProjectList",
+    "schema": {
+      "title": "AppProjectList is list of AppProject resources\n+k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ListMeta" },
+        "items": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1AppProject" } }
+      }
+    }
+  }
+]

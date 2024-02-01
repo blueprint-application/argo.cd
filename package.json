@@ -1,0 +1,62 @@
+{
+  "name": "@tmatic/argo.cd",
+  "version": "1.0.0",
+  "description": "ArgoCD Typescript SDK",
+  "author": "TMatic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blueprint-application/argo.cd.git"
+  },
+  "tmatic": {
+    "spec": {
+      "type": "openapi"
+    }
+  },
+  "keywords": [
+    "argo-cd-sdk",
+    "typescript"
+  ],
+  "license": "ISC",
+  "main": "./dist-cjs/index.js",
+  "module": "./dist-es/index.js",
+  "types": "./dist-types/index.d.ts",
+  "scripts": {
+    "build": "npm run build:cjs && npm run build:es",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:es": "tsc -p tsconfig.es.json",
+    "lint": "eslint \"./src/**\"",
+    "lint:fix": "eslint \"./src/**\" --fix",
+    "normalize": "npm run prettify && npm run lint:fix",
+    "prettify": "prettier --write ./src",
+    "test": "mocha --require ts-node/register **/*.spec.ts --recursive --timeout 5000"
+  },
+  "files": [
+    "dist-cjs",
+    "dist-es",
+    "dist-types"
+  ],
+  "dependencies": {
+    "ajv": "8.12.0",
+    "axios": "1.6.0",
+    "json-schema": "0.4.0",
+    "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "@types/chai": "4.3.5",
+    "@types/lodash": "4.14.196",
+    "@types/mocha": "10.0.1",
+    "@typescript-eslint/eslint-plugin": "4.22.1",
+    "@typescript-eslint/parser": "4.22.1",
+    "chai": "4.3.7",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "4.1.0",
+    "eslint-plugin-react": "7.24.0",
+    "mocha": "10.2.0",
+    "prettier": "2.8.8",
+    "prettier-plugin-organize-imports": "3.2.3",
+    "ts-node": "10.9.1",
+    "tslib": "2.6.1",
+    "typescript": "5.1.6"
+  }
+}

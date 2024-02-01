@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/oidcClaim",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "values": { "type": "array", "items": { "type": "string" } },
+        "value": { "type": "string" },
+        "essential": { "type": "boolean" }
+      }
+    }
+  }
+]

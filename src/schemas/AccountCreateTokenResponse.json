@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/accountCreateTokenResponse",
+    "schema": { "type": "object", "properties": { "token": { "type": "string" } } }
+  }
+]

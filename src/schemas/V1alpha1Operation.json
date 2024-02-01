@@ -1,0 +1,19 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1Operation",
+    "schema": {
+      "title": "Operation contains information about a requested or running operation",
+      "type": "object",
+      "properties": {
+        "sync": { "$ref": "#/components/schemas/v1alpha1SyncOperation" },
+        "initiatedBy": { "$ref": "#/components/schemas/v1alpha1OperationInitiator" },
+        "retry": { "$ref": "#/components/schemas/v1alpha1RetryStrategy" },
+        "info": {
+          "title": "Info is a list of informational items for this operation",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1Info" }
+        }
+      }
+    }
+  }
+]

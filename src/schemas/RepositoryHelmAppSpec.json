@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryHelmAppSpec",
+    "schema": {
+      "title": "HelmAppSpec contains helm app name  in source repo",
+      "type": "object",
+      "properties": {
+        "valueFiles": { "type": "array", "items": { "type": "string" } },
+        "fileParameters": {
+          "title": "helm file parameters",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1HelmFileParameter" }
+        },
+        "values": { "title": "the contents of values.yaml", "type": "string" },
+        "name": { "type": "string" },
+        "parameters": {
+          "title": "the output of `helm inspect values`",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1HelmParameter" }
+        }
+      }
+    }
+  }
+]

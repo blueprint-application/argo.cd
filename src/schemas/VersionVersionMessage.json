@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/versionVersionMessage",
+    "schema": {
+      "title": "VersionMessage represents version of the Argo CD API server",
+      "type": "object",
+      "properties": {
+        "Compiler": { "type": "string" },
+        "HelmVersion": { "type": "string" },
+        "ExtraBuildInfo": { "type": "string" },
+        "GitCommit": { "type": "string" },
+        "Platform": { "type": "string" },
+        "KustomizeVersion": { "type": "string" },
+        "KubectlVersion": { "type": "string" },
+        "GitTreeState": { "type": "string" },
+        "JsonnetVersion": { "type": "string" },
+        "GitTag": { "type": "string" },
+        "BuildDate": { "type": "string" },
+        "Version": { "type": "string" },
+        "GoVersion": { "type": "string" }
+      }
+    }
+  }
+]

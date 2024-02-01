@@ -1,0 +1,86 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1Repository",
+    "schema": {
+      "title": "Repository is a repository holding application configurations",
+      "type": "object",
+      "properties": {
+        "tlsClientCertKey": {
+          "title": "TLSClientCertKey contains a private key in PEM format for authenticating at the repo server",
+          "type": "string"
+        },
+        "insecureIgnoreHostKey": {
+          "title": "InsecureIgnoreHostKey should not be used anymore, Insecure is favoured\nUsed only for Git repos",
+          "type": "boolean"
+        },
+        "githubAppID": {
+          "format": "int64",
+          "title": "GithubAppId specifies the ID of the GitHub app used to access the repo",
+          "type": "string"
+        },
+        "connectionState": { "$ref": "#/components/schemas/v1alpha1ConnectionState" },
+        "repo": { "title": "Repo contains the URL to the remote repository", "type": "string" },
+        "githubAppInstallationID": {
+          "format": "int64",
+          "title": "GithubAppInstallationId specifies the installation ID of the GitHub App used to access the repo",
+          "type": "string"
+        },
+        "project": {
+          "title": "Reference between project and repository that allow you automatically to be added as item inside SourceRepos project entity",
+          "type": "string"
+        },
+        "tlsClientCertData": {
+          "title": "TLSClientCertData contains a certificate in PEM format for authenticating at the repo server",
+          "type": "string"
+        },
+        "enableOCI": {
+          "title": "EnableOCI specifies whether helm-oci support should be enabled for this repo",
+          "type": "boolean"
+        },
+        "type": {
+          "description": "Type specifies the type of the repo. Can be either \"git\" or \"helm. \"git\" is assumed if empty or absent.",
+          "type": "string"
+        },
+        "gcpServiceAccountKey": {
+          "title": "GCPServiceAccountKey specifies the service account key in JSON format to be used for getting credentials to Google Cloud Source repos",
+          "type": "string"
+        },
+        "githubAppPrivateKey": { "title": "Github App Private Key PEM data", "type": "string" },
+        "enableLfs": {
+          "description": "EnableLFS specifies whether git-lfs support should be enabled for this repo. Only valid for Git repositories.",
+          "type": "boolean"
+        },
+        "proxy": { "title": "Proxy specifies the HTTP/HTTPS proxy used to access the repo", "type": "string" },
+        "password": {
+          "title": "Password contains the password or PAT used for authenticating at the remote repository",
+          "type": "string"
+        },
+        "sshPrivateKey": {
+          "description": "SSHPrivateKey contains the PEM data for authenticating at the repo server. Only used with Git repos.",
+          "type": "string"
+        },
+        "forceHttpBasicAuth": {
+          "title": "ForceHttpBasicAuth specifies whether Argo CD should attempt to force basic auth for HTTP connections",
+          "type": "boolean"
+        },
+        "insecure": {
+          "title": "Insecure specifies whether the connection to the repository ignores any errors when verifying TLS certificates or SSH host keys",
+          "type": "boolean"
+        },
+        "name": {
+          "title": "Name specifies a name to be used for this repo. Only used with Helm repos",
+          "type": "string"
+        },
+        "inheritedCreds": { "title": "Whether credentials were inherited from a credential set", "type": "boolean" },
+        "githubAppEnterpriseBaseUrl": {
+          "title": "GithubAppEnterpriseBaseURL specifies the base URL of GitHub Enterprise installation. If empty will default to https://api.github.com",
+          "type": "string"
+        },
+        "username": {
+          "title": "Username contains the user name used for authenticating at the remote repository",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

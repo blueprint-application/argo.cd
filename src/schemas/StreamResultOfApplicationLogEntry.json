@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/Stream_result_of_applicationLogEntry",
+    "schema": {
+      "title": "Stream result of applicationLogEntry",
+      "type": "object",
+      "properties": {
+        "result": { "$ref": "#/components/schemas/applicationLogEntry" },
+        "error": { "$ref": "#/components/schemas/runtimeStreamError" }
+      }
+    }
+  }
+]

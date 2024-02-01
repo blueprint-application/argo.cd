@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1OrphanedResourceKey",
+    "schema": {
+      "title": "OrphanedResourceKey is a reference to a resource to be ignored from",
+      "type": "object",
+      "properties": { "kind": { "type": "string" }, "name": { "type": "string" }, "group": { "type": "string" } }
+    }
+  }
+]

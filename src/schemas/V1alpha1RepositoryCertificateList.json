@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1RepositoryCertificateList",
+    "schema": {
+      "title": "RepositoryCertificateList is a collection of RepositoryCertificates",
+      "type": "object",
+      "properties": {
+        "metadata": { "$ref": "#/components/schemas/v1ListMeta" },
+        "items": {
+          "title": "List of certificates to be processed",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1RepositoryCertificate" }
+        }
+      }
+    }
+  }
+]

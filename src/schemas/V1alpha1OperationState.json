@@ -1,0 +1,29 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1OperationState",
+    "schema": {
+      "title": "OperationState contains information about state of a running operation",
+      "type": "object",
+      "properties": {
+        "phase": { "title": "Phase is the current phase of the operation", "type": "string" },
+        "retryCount": { "format": "int64", "title": "RetryCount contains time of operation retries", "type": "string" },
+        "startedAt": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        },
+        "syncResult": { "$ref": "#/components/schemas/v1alpha1SyncOperationResult" },
+        "message": {
+          "description": "Message holds any pertinent messages when attempting to perform operation (typically errors).",
+          "type": "string"
+        },
+        "operation": { "$ref": "#/components/schemas/v1alpha1Operation" },
+        "finishedAt": {
+          "format": "date-time",
+          "description": "Time is a wrapper around time.Time which supports correct\nmarshaling to YAML and JSON.  Wrappers are provided for many\nof the factory methods that the time package offers.\n\n+protobuf.options.marshal=false\n+protobuf.as=Timestamp\n+protobuf.options.(gogoproto.goproto_stringer)=false",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

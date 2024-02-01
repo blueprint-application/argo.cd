@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1PluginConfigMapRef",
+    "schema": { "type": "object", "properties": { "name": { "title": "Name of the ConfigMap", "type": "string" } } }
+  }
+]

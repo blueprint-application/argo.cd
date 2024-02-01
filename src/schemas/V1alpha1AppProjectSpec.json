@@ -1,0 +1,67 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1AppProjectSpec",
+    "schema": {
+      "title": "AppProjectSpec is the specification of an AppProject",
+      "type": "object",
+      "properties": {
+        "permitOnlyProjectScopedClusters": {
+          "title": "PermitOnlyProjectScopedClusters determines whether destinations can only reference clusters which are project-scoped",
+          "type": "boolean"
+        },
+        "orphanedResources": { "$ref": "#/components/schemas/v1alpha1OrphanedResourcesMonitorSettings" },
+        "destinations": {
+          "title": "Destinations contains list of destinations available for deployment",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ApplicationDestination" }
+        },
+        "roles": {
+          "title": "Roles are user defined RBAC roles associated with this project",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ProjectRole" }
+        },
+        "clusterResourceWhitelist": {
+          "title": "ClusterResourceWhitelist contains list of whitelisted cluster level resources",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1GroupKind" }
+        },
+        "description": { "title": "Description contains optional project description", "type": "string" },
+        "clusterResourceBlacklist": {
+          "title": "ClusterResourceBlacklist contains list of blacklisted cluster level resources",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1GroupKind" }
+        },
+        "sourceRepos": {
+          "title": "SourceRepos contains list of repository URLs which can be used for deployment",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sourceNamespaces": {
+          "title": "SourceNamespaces defines the namespaces application resources are allowed to be created in",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "namespaceResourceBlacklist": {
+          "title": "NamespaceResourceBlacklist contains list of blacklisted namespace level resources",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1GroupKind" }
+        },
+        "namespaceResourceWhitelist": {
+          "title": "NamespaceResourceWhitelist contains list of whitelisted namespace level resources",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1GroupKind" }
+        },
+        "signatureKeys": {
+          "title": "SignatureKeys contains a list of PGP key IDs that commits in Git must be signed with in order to be allowed for sync",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1SignatureKey" }
+        },
+        "syncWindows": {
+          "title": "SyncWindows controls when syncs can be run for apps in this project",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1SyncWindow" }
+        }
+      }
+    }
+  }
+]

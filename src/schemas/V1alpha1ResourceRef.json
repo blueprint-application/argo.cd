@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceRef",
+    "schema": {
+      "title": "ResourceRef includes fields which uniquely identify a resource",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "kind": { "type": "string" },
+        "name": { "type": "string" },
+        "namespace": { "type": "string" },
+        "version": { "type": "string" },
+        "group": { "type": "string" }
+      }
+    }
+  }
+]

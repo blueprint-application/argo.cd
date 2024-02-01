@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/clusterSettingsPluginsResponse",
+    "schema": {
+      "type": "object",
+      "properties": { "plugins": { "type": "array", "items": { "$ref": "#/components/schemas/clusterPlugin" } } }
+    }
+  }
+]

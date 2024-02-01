@@ -1,0 +1,35 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ResourceDiff",
+    "schema": {
+      "title": "ResourceDiff holds the diff of a live and target resource object\nTODO: describe members of this type",
+      "type": "object",
+      "properties": {
+        "hook": { "type": "boolean" },
+        "kind": { "type": "string" },
+        "targetState": {
+          "title": "TargetState contains the JSON serialized resource manifest defined in the Git/Helm",
+          "type": "string"
+        },
+        "normalizedLiveState": {
+          "title": "NormalizedLiveState contains JSON serialized live resource state with applied normalizations",
+          "type": "string"
+        },
+        "resourceVersion": { "type": "string" },
+        "name": { "type": "string" },
+        "namespace": { "type": "string" },
+        "modified": { "type": "boolean" },
+        "diff": {
+          "title": "Diff contains the JSON patch between target and live resource\nDeprecated: use NormalizedLiveState and PredictedLiveState to render the difference",
+          "type": "string"
+        },
+        "predictedLiveState": {
+          "title": "PredictedLiveState contains JSON serialized resource state that is calculated based on normalized and target resource state",
+          "type": "string"
+        },
+        "group": { "type": "string" },
+        "liveState": { "title": "TargetState contains the JSON live resource manifest", "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1KnownTypeField",
+    "schema": {
+      "title": "KnownTypeField contains mapping between CRD field and known Kubernetes type.\nThis is mainly used for unit conversion in unknown resources (e.g. 0.1 == 100mi)\nTODO: Describe the members of this type",
+      "type": "object",
+      "properties": { "field": { "type": "string" }, "type": { "type": "string" } }
+    }
+  }
+]

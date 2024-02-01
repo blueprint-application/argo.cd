@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1AWSAuthConfig",
+    "schema": {
+      "title": "AWSAuthConfig is an AWS IAM authentication configuration",
+      "type": "object",
+      "properties": {
+        "roleARN": {
+          "description": "RoleARN contains optional role ARN. If set then AWS IAM Authenticator assume a role to perform cluster operations instead of the default AWS credential provider chain.",
+          "type": "string"
+        },
+        "clusterName": { "title": "ClusterName contains AWS cluster name", "type": "string" }
+      }
+    }
+  }
+]

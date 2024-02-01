@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1HealthStatus",
+    "schema": {
+      "title": "HealthStatus contains information about the currently observed health state of an application or resource",
+      "type": "object",
+      "properties": {
+        "message": {
+          "title": "Message is a human-readable informational message describing the health status",
+          "type": "string"
+        },
+        "status": { "title": "Status holds the status code of the application or resource", "type": "string" }
+      }
+    }
+  }
+]

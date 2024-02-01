@@ -1,0 +1,6 @@
+[
+  {
+    "ref": "#/components/schemas/projectProjectUpdateRequest",
+    "schema": { "type": "object", "properties": { "project": { "$ref": "#/components/schemas/v1alpha1AppProject" } } }
+  }
+]

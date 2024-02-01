@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/v1LoadBalancerIngress",
+    "schema": {
+      "description": "LoadBalancerIngress represents the status of a load-balancer ingress point:\ntraffic intended for the service should be sent to an ingress point.",
+      "type": "object",
+      "properties": {
+        "hostname": {
+          "title": "Hostname is set for load-balancer ingress points that are DNS based\n(typically AWS load-balancers)\n+optional",
+          "type": "string"
+        },
+        "ip": {
+          "title": "IP is set for load-balancer ingress points that are IP based\n(typically GCE or OpenStack load-balancers)\n+optional",
+          "type": "string"
+        },
+        "ports": {
+          "title": "Ports is a list of records of service ports\nIf used, every port defined in the service should have an entry in it\n+listType=atomic\n+optional",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1PortStatus" }
+        }
+      }
+    }
+  }
+]

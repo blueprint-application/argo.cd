@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1JWTToken",
+    "schema": {
+      "title": "JWTToken holds the issuedAt and expiresAt values of a token",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "exp": { "format": "int64", "type": "string" },
+        "iat": { "format": "int64", "type": "string" }
+      }
+    }
+  }
+]

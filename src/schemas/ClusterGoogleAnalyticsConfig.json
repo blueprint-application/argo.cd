@@ -1,0 +1,9 @@
+[
+  {
+    "ref": "#/components/schemas/clusterGoogleAnalyticsConfig",
+    "schema": {
+      "type": "object",
+      "properties": { "anonymizeUsers": { "type": "boolean" }, "trackingID": { "type": "string" } }
+    }
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/Stream_result_of_v1alpha1ApplicationTree",
+    "schema": {
+      "title": "Stream result of v1alpha1ApplicationTree",
+      "type": "object",
+      "properties": {
+        "result": { "$ref": "#/components/schemas/v1alpha1ApplicationTree" },
+        "error": { "$ref": "#/components/schemas/runtimeStreamError" }
+      }
+    }
+  }
+]

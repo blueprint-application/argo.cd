@@ -1,0 +1,33 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1RepositoryCertificate",
+    "schema": {
+      "title": "A RepositoryCertificate is either SSH known hosts entry or TLS certificate",
+      "type": "object",
+      "properties": {
+        "certType": {
+          "title": "CertType specifies the type of the certificate - currently one of \"https\" or \"ssh\"",
+          "type": "string"
+        },
+        "certSubType": {
+          "title": "CertSubType specifies the sub type of the cert, i.e. \"ssh-rsa\"",
+          "type": "string"
+        },
+        "certInfo": {
+          "title": "CertInfo will hold additional certificate info, depdendent on the certificate type (e.g. SSH fingerprint, X509 CommonName)",
+          "type": "string"
+        },
+        "serverName": {
+          "title": "ServerName specifies the DNS name of the server this certificate is intended for",
+          "type": "string"
+        },
+        "certData": {
+          "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$",
+          "format": "byte",
+          "title": "CertData contains the actual certificate data, dependent on the certificate type",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

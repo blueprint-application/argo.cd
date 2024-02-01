@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1HostInfo",
+    "schema": {
+      "title": "HostInfo holds host name and resources metrics\nTODO: describe purpose of this type\nTODO: describe members of this type",
+      "type": "object",
+      "properties": {
+        "systemInfo": { "$ref": "#/components/schemas/v1NodeSystemInfo" },
+        "name": { "type": "string" },
+        "resourcesInfo": { "type": "array", "items": { "$ref": "#/components/schemas/v1alpha1HostResourceInfo" } }
+      }
+    }
+  }
+]

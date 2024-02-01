@@ -1,0 +1,27 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ClusterInfo",
+    "schema": {
+      "title": "ClusterInfo contains information about the cluster",
+      "type": "object",
+      "properties": {
+        "serverVersion": {
+          "title": "ServerVersion contains information about the Kubernetes version of the cluster",
+          "type": "string"
+        },
+        "apiVersions": {
+          "title": "APIVersions contains list of API versions supported by the cluster",
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "connectionState": { "$ref": "#/components/schemas/v1alpha1ConnectionState" },
+        "cacheInfo": { "$ref": "#/components/schemas/v1alpha1ClusterCacheInfo" },
+        "applicationsCount": {
+          "format": "int64",
+          "title": "ApplicationsCount is the number of applications managed by Argo CD on the cluster",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

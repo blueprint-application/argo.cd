@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "#/components/schemas/sessionGetUserInfoResponse",
+    "schema": {
+      "title": "The current user's userInfo info",
+      "type": "object",
+      "properties": {
+        "loggedIn": { "type": "boolean" },
+        "iss": { "type": "string" },
+        "groups": { "type": "array", "items": { "type": "string" } },
+        "username": { "type": "string" }
+      }
+    }
+  }
+]

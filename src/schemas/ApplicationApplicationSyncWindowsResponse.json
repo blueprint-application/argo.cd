@@ -1,0 +1,19 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationSyncWindowsResponse",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "assignedWindows": {
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/applicationApplicationSyncWindow" }
+        },
+        "activeWindows": {
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/applicationApplicationSyncWindow" }
+        },
+        "canSync": { "type": "boolean" }
+      }
+    }
+  }
+]

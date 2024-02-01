@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/applicationApplicationRollbackRequest",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "dryRun": { "type": "boolean" },
+        "prune": { "type": "boolean" },
+        "name": { "type": "string" },
+        "project": { "type": "string" },
+        "id": { "format": "int64", "type": "string" },
+        "appNamespace": { "type": "string" }
+      }
+    }
+  }
+]

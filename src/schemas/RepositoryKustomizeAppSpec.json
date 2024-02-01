@@ -1,0 +1,16 @@
+[
+  {
+    "ref": "#/components/schemas/repositoryKustomizeAppSpec",
+    "schema": {
+      "title": "KustomizeAppSpec contains kustomize images",
+      "type": "object",
+      "properties": {
+        "images": {
+          "description": "images is a list of available images.",
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+]

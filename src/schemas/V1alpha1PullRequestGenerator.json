@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1PullRequestGenerator",
+    "schema": {
+      "description": "PullRequestGenerator defines a generator that scrapes a PullRequest API to find candidate pull requests.",
+      "type": "object",
+      "properties": {
+        "template": { "$ref": "#/components/schemas/v1alpha1ApplicationSetTemplate" },
+        "gitea": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorGitea" },
+        "github": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorGithub" },
+        "bitbucketServer": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorBitbucketServer" },
+        "azuredevops": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorAzureDevOps" },
+        "gitlab": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorGitLab" },
+        "filters": {
+          "description": "Filters for which pull requests should be considered.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorFilter" }
+        },
+        "bitbucket": { "$ref": "#/components/schemas/v1alpha1PullRequestGeneratorBitbucket" },
+        "requeueAfterSeconds": { "format": "int64", "description": "Standard parameters.", "type": "string" }
+      }
+    }
+  }
+]

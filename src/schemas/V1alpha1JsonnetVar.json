@@ -1,0 +1,10 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1JsonnetVar",
+    "schema": {
+      "title": "JsonnetVar represents a variable to be passed to jsonnet during manifest generation",
+      "type": "object",
+      "properties": { "code": { "type": "boolean" }, "name": { "type": "string" }, "value": { "type": "string" } }
+    }
+  }
+]

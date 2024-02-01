@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1EventSource",
+    "schema": {
+      "description": "EventSource contains information for an event.",
+      "type": "object",
+      "properties": {
+        "component": { "title": "Component from which the event is generated.\n+optional", "type": "string" },
+        "host": { "title": "Node name on which the event is generated.\n+optional", "type": "string" }
+      }
+    }
+  }
+]

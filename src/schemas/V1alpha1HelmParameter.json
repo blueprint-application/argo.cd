@@ -1,0 +1,17 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1HelmParameter",
+    "schema": {
+      "title": "HelmParameter is a parameter that's passed to helm template during manifest generation",
+      "type": "object",
+      "properties": {
+        "forceString": {
+          "title": "ForceString determines whether to tell Helm to interpret booleans and numbers as strings",
+          "type": "boolean"
+        },
+        "name": { "title": "Name is the name of the Helm parameter", "type": "string" },
+        "value": { "title": "Value is the value for the Helm parameter", "type": "string" }
+      }
+    }
+  }
+]

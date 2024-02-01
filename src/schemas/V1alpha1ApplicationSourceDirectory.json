@@ -1,0 +1,24 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationSourceDirectory",
+    "schema": {
+      "title": "ApplicationSourceDirectory holds options for applications of type plain YAML or Jsonnet",
+      "type": "object",
+      "properties": {
+        "include": {
+          "title": "Include contains a glob pattern to match paths against that should be explicitly included during manifest generation",
+          "type": "string"
+        },
+        "jsonnet": { "$ref": "#/components/schemas/v1alpha1ApplicationSourceJsonnet" },
+        "recurse": {
+          "title": "Recurse specifies whether to scan a directory recursively for manifests",
+          "type": "boolean"
+        },
+        "exclude": {
+          "title": "Exclude contains a glob pattern to match paths against that should be explicitly excluded from being used during manifest generation",
+          "type": "string"
+        }
+      }
+    }
+  }
+]

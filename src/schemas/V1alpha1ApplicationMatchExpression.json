@@ -1,0 +1,13 @@
+[
+  {
+    "ref": "#/components/schemas/v1alpha1ApplicationMatchExpression",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "values": { "type": "array", "items": { "type": "string" } },
+        "key": { "type": "string" },
+        "operator": { "type": "string" }
+      }
+    }
+  }
+]

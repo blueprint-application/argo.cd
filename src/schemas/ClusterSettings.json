@@ -1,0 +1,41 @@
+[
+  {
+    "ref": "#/components/schemas/clusterSettings",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "appLabelKey": { "type": "string" },
+        "uiBannerPermanent": { "type": "boolean" },
+        "appsInAnyNamespaceEnabled": { "type": "boolean" },
+        "kustomizeVersions": { "type": "array", "items": { "type": "string" } },
+        "plugins": { "type": "array", "items": { "$ref": "#/components/schemas/clusterPlugin" } },
+        "uiBannerContent": { "type": "string" },
+        "statusBadgeEnabled": { "type": "boolean" },
+        "controllerNamespace": { "type": "string" },
+        "userLoginsDisabled": { "type": "boolean" },
+        "resourceOverrides": {
+          "additionalProperties": { "$ref": "#/components/schemas/v1alpha1ResourceOverride" },
+          "type": "object"
+        },
+        "kustomizeOptions": { "$ref": "#/components/schemas/v1alpha1KustomizeOptions" },
+        "configManagementPlugins": {
+          "description": "Deprecated: use sidecar plugins instead.",
+          "type": "array",
+          "items": { "$ref": "#/components/schemas/v1alpha1ConfigManagementPlugin" }
+        },
+        "passwordPattern": { "type": "string" },
+        "uiBannerURL": { "type": "string" },
+        "url": { "type": "string" },
+        "help": { "$ref": "#/components/schemas/clusterHelp" },
+        "trackingMethod": { "type": "string" },
+        "execEnabled": { "type": "boolean" },
+        "googleAnalytics": { "$ref": "#/components/schemas/clusterGoogleAnalyticsConfig" },
+        "statusBadgeRootUrl": { "type": "string" },
+        "uiCssURL": { "type": "string" },
+        "oidcConfig": { "$ref": "#/components/schemas/clusterOIDCConfig" },
+        "dexConfig": { "$ref": "#/components/schemas/clusterDexConfig" },
+        "uiBannerPosition": { "type": "string" }
+      }
+    }
+  }
+]
